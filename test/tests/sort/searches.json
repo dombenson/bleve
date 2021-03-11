@@ -550,5 +550,67 @@
         }
       ]
     }
+  },
+  {
+    "comment": "sort by age, ascending, above 25",
+    "search": {
+      "from": 0,
+      "size": 10,
+      "query": {
+        "match_all": {}
+      },
+      "sort": [
+        "age"
+      ],
+      "search_after": [
+        "25"
+      ]
+    },
+    "result": {
+      "total_hits": 6,
+      "hits": [
+        {
+          "id": "d"
+        },
+        {
+          "id": "e"
+        }
+      ]
+    }
+  },
+  {
+    "comment": "sort by age, ascending, above 20, id, ascending",
+    "search": {
+      "from": 0,
+      "size": 10,
+      "query": {
+        "match_all": {}
+      },
+      "sort": [
+        "age",
+        "id"
+      ],
+      "search_after": [
+        "20",
+        ""
+      ]
+    },
+    "result": {
+      "total_hits": 6,
+      "hits": [
+        {
+          "id": "b"
+        },
+        {
+          "id": "c"
+        },
+        {
+          "id": "d"
+        },
+        {
+          "id": "e"
+        }
+      ]
+    }
   }
 ]
